@@ -10,7 +10,7 @@ int IsPrime(int value) {
         if (value % i == 0) { return 0; } 
     }
 
-  return 1
+  return 1;
 }
 
 int main() {
@@ -21,10 +21,10 @@ int main() {
 
     for (int i = start; i <= end; i += 2) {
       if (IsPrime(i)) {
-        printf("%d", i)
+        printf("%d", i);
       }
     }
-   print("\n")
+   printf("\n");
   
    return 0;
 }
