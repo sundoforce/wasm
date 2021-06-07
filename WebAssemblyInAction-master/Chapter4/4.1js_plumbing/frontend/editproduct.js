@@ -1,4 +1,4 @@
-const initialData = {
+onst initialData = {
   name: "Women's Mid Rise Skinny Jeans",
   categoryId: "100",
 };
@@ -29,7 +29,7 @@ function getSelectedCategoryId() {
 
 function setErrorMessage(error) {
   const errorMessage = document.getElementById("errorMessage");
-  errorMessage.innerText = error; 
+  errorMessage.innerText = error;
   errorMessage.style.display = (error === "" ? "none" : "");
 }
 
@@ -68,7 +68,7 @@ function validateCategory(categoryId, errorMessagePointer) {
   const arrayPointer = Module._malloc((arrayLength * bytesPerElement));
   Module.HEAP32.set(VALID_CATEGORY_IDS, (arrayPointer / bytesPerElement));
 
-  const isValid = Module.ccall('ValidateCategory', 
+  const isValid = Module.ccall('ValidateCategory',
       'number',
       ['string', 'number', 'number', 'number'],
       [categoryId, arrayPointer, arrayLength, errorMessagePointer]);
